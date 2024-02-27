@@ -1,0 +1,9 @@
+<div class="btn btn-sm btn-success mb-2" *ngFor="let message in messages">
+{{message.message}}
+</div>
+<div class="btn btn-sm btn-success mb-2">
+    <input type="text"  [(ngModel)]="message" name="something"/>
+    <button (click)="sendMessage()" class="btn btn-sm btn-danger btn-delete-user">
+        <span *ngIf="!group.isDeleting">Send</span>
+    </button>
+</div>
